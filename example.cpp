@@ -55,8 +55,12 @@ void *imgui_touch(void *) {
     }
 
     // HOOK the new version
-
-    auto new_addr = xdl_sym(libIn, "_ZN7android13InputConsumer7consumeEPNS_26InputEventFactoryInterfaceEblPjPPNS_10InputEventE",
+#ifdef __aarch64__
+    const char *consume_symbol = "_ZN7android13InputConsumer7consumeEPNS_26InputEventFactoryInterfaceEblPjPPNS_10InputEventE";
+#else
+    const char *consume_symbol = "_ZN7android13InputConsumer7consumeEPNS_26InputEventFactoryInterfaceEbxPjPPNS_10InputEventE";
+#endif
+    auto new_addr = xdl_sym(libIn, consume_symbol,
                         nullptr);
     if (new_addr == nullptr) {
         LOGE("Failed to find new touch address");
