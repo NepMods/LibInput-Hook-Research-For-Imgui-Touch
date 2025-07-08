@@ -170,16 +170,14 @@ Invoke `setup_input_consumer_hook()` early in your library's initialization (e.g
 ## References
 
 * AOSP `InputTransport.cpp` (Android 15):
-  [https://android.googlesource.com/platform/frameworks/native/+/refs/heads/android-15.0.0\_r1/libs/input/InputTransport.cpp](https://android.googlesource.com/platform/frameworks/native/+/refs/heads/android-15.0.0_r1/libs/input/InputTransport.cpp)
-
+  [https://android.googlesource.com/platform/frameworks/native/+/14e8b01/libs/input/InputTransport.cpp](https://android.googlesource.com/platform/frameworks/native/+/14e8b01/libs/input/InputTransport.cpp)
 * Dear ImGui Android Backend:
   [https://github.com/ocornut/imgui/blob/master/backends/imgui\_impl\_android.cpp](https://github.com/ocornut/imgui/blob/master/backends/imgui_impl_android.cpp)
 
 * DobbyHook Library:
-  [https://github.com/facebookincubator/dobby](https://github.com/facebookincubator/dobby)
-
+    [https://github.com/jmpews/Dobby](https://github.com/jmpews/Dobby)
 * xdl Symbol Resolver:
-  [https://github.com/android-ndk/xdl](https://github.com/android-ndk/xdl)
+    [https://github.com/hexhacking/xDL](https://github.com/hexhacking/xDL)
 
 ---
 
