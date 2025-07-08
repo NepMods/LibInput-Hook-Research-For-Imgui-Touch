@@ -41,10 +41,18 @@ which could be hooked to intercept and inject touch events into ImGui.
 
 Starting with AOSP Android 15 and newer builds, the symbol `initializeMotionEvent` is no longer exported. Instead, internal input handling has been refactored, and the equivalent functionality resides behind a new symbol:
 
+***64 bit***
 ```cpp
 _ZN7android13InputConsumer7consumeEPNS_26InputEventFactoryInterfaceEblPjPPNS_10InputEventE
 ```
+***32 bit***
+```cpp
+_ZN7android13InputConsumer7consumeEPNS_26InputEventFactoryInterfaceEbxPjPPNS_10InputEventE
+```
 
+- We will go with 64 bit one here. for 32bit, you just need to change the symbol as shown in `example.cpp`. the hook remains same
+
+  
 Hooking the new symbol is non-trivial due to:
 
 * Different argument list and calling conventions.
